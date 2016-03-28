@@ -4,7 +4,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     hbs = require('hbs'),
     mongoose = require('mongoose'),
-    auth = require('./resources/auth');
+    auth = require('./resources/auth'),
+    path = require('path');
 
 // require and load dotenv
 require('dotenv').load();
