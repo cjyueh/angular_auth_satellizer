@@ -71,7 +71,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
       resolve: {
         loginRequired: loginRequired
       }
-    })
+    });
 
 
     function skipIfLoggedIn($q, $auth) {
@@ -133,7 +133,7 @@ function LoginController (Account) {
       .then(function(){
          // TODO #4: clear sign up form
          // TODO #5: redirect to '/profile'
-      })
+      });
   };
 }
 
@@ -156,7 +156,7 @@ function SignupController () {
 
 LogoutController.$inject = ["Account"]; // minification protection
 function LogoutController (Account) {
-  Account.logout()
+  Account.logout();
   // TODO #7: when the logout succeeds, redirect to the login page
 }
 
@@ -234,7 +234,7 @@ function Account($http, $q, $auth) {
         self.user = null;
         deferred.reject();
       }
-    )
+    );
     self.user = promise = deferred.promise;
     return promise;
 

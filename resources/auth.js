@@ -1,5 +1,5 @@
 var jwt = require('jwt-simple'),
-    moment = require('moment');
+    moment = require('moment'); 
 
 module.exports = {
   /*
